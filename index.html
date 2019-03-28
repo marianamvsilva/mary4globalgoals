@@ -1,12 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-  </body>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous" />
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weathify</h1>
+        <h2>The weather app for impulsive travelers</h2>
+        <p>In which nearest European capital is it...</p>
+
+        <button>🌞 Sunny</button> <button>🌧 Rainy</button> <button>🌥 Cloudy</button>
+        <button>❄️ Snowing</button>
+        <!-- User chooses what they are looking for -->
+        <br />
+        <br>
+        <h3>Let us know your location to find the nearest city</h3>
+        <div>
+            <input type="text" placeholder="City" />
+        </div>
+        <br />
+        <h2>Today, it is 🌞 in</h2>
+        <!-- SUNNY to be replaced by the choice above -->
+        <div>
+
+            <h3>Nearest capital city</h3>
+
+
+            <div class="card mb-3" style="max-width: 700px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <h2 class="card-title">25ºC</h2>
+                        <p class="card-text">15:15</p>
+                        <p>Max temperature: <span class="temperature">27</span>ºC</p>
+                        <p>Min temperature: <span class="temperature">15</span>ºC</p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="current-location">Madrid, Spain</h2>
+                            <p class="card-text">
+                                PLACEHOLDER TEXT
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">Book your flight now!</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <p class="weekDay"><b>Monday</b></p>
+                    <p class="temperature"><b>10-27ºC</b></p>
+                    <p>🌞 Sunny</p>
+                </div>
+                <div class="col-sm">
+                    <p class="weekDay"><b>Tuesday</b></p>
+                    <p class="temperature"><b>10-27ºC</b></p>
+                    <p>🌞 Sunny</p>
+                </div>
+                <div class="col-sm">
+                    <p class="weekDay"><b>Wednesday</b></p>
+                    <p class="temperature"><b>10-27ºC</b></p>
+                    <p>🌥 Cloudy</p>
+                </div>
+                <div class="col-sm">
+                    <p class="weekDay"></p><b>Thursday</b></p>
+                    <p class="temperature"><b>10-27ºC</b></p>
+                    <p>🌧 Rainy</p>
+                </div>
+                <div class="col-sm">
+                    <p class="weekDay"></p><b>Friday</b></p>
+                    <p class="temperature"><b>10-27ºC</b></p>
+                    <p>🌞 Sunny</p>
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <h2>Other Cities</h2>
+            <br>
+            <div class="row">
+                <div class="col-sm">
+                    <h3>VIENNA, Austria</h3>
+                    <h1 class="temperature">17ºC</h1>
+                    <p>15:15</p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <p><b>Monday</b></p>
+                            <p class="temperature"><b>10-27ºC</b></p>
+                            <p>🌞 Sunny</p>
+                        </div>
+                        <div class="col-sm">
+                            <p><b>Tuesday</b></p>
+                            <p class="temperature"><b>10-27ºC</b></p>
+                            <p>🌞 Sunny</p>
+                        </div>
+                        <div class="col-sm">
+                            <p><b>Wednesday</b></p>
+                            <p class="temperature"><b>10-27ºC</b></p>
+                            <p>🌧 Rainy</p>
+                        </div>
+                        <div class="col-sm">
+                            <p><b>Thursday</b></p>
+                            <p class="temperature"><b>10-27ºC</b></p>
+                            <p>🌞 Sunny</p>
+                        </div>
+                        <div class="col-sm">
+                            <p><b>Friday</b></p>
+                            <p class="temperature"><b>10-27ºC</b></p>
+                            <p>🌞 Sunny</p>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div class="col-sm">
+                    <h3>KIEV, Ukraine</h3>
+                    <h1 class="temperature">12ºC</h1>
+                    <p>16:15</p>
+                    <div class="row">
+
+                        <div class="col-sm">
+                            <p><b>Monday</b></p>
+                            <p class="temperature"><b>10-27ºC</b></p>
+                            <p>🌞 Sunny</p>
+                        </div>
+                        <div class="col-sm">
+                            <p><b>Tuesday</b></p>
+                            <p class="temperature"><b>10-27ºC</b></p>
+                            <p>🌞 Sunny</p>
+                        </div>
+                        <div class="col-sm">
+                            <p><b>Wednesday</b></p>
+                            <p class="temperature"><b>10-27ºC</b></p>
+                            <p>🌞 Sunny</p>
+                        </div>
+                        <div class="col-sm">
+                            <p><b>Thursday</b></p>
+                            <p class="temperature"><b>10-27ºC</b></p>
+                            <p>🌥 Cloudy</p>
+                        </div>
+                        <div class="col-sm">
+                            <p><b>Friday</b></p>
+                            <p class="temperature"><b>10-27ºC</b></p>
+                            <p>🌥 Cloudy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <img src="https://lh3.googleusercontent.com/GqwUjpWSXa3szy_QJmUgNjpKb8xuWn7aCZrnKvLdjbTwwSO1KfyiQFB8SDfK53PKrJMlZKSXBy8gmsddqkwo7HMk6sAvTmku65-8T-qkQvU-CMlJERksZtn3ywjYqtj1cmxj2ep7bVuKDnfE9CV3FE6LyrwRbYxhhJfeZX7TQIx6e069rmcVdjCUC8T5kyrcKehwGmRipzyLkoS3RfPARIBHQGG3L3_XTI8WN3Q8RjkV-46pvSVGm3qab-1hXBEkhcDHtY5xdzbGLA7uFwITnWGpqwt4TF6A5RGkZBXDlf90Zr4sOkapB3mEnDXv_0EDQhzp6ob7dg1kSFMCVsvJA2hKcwK5st0ud1kLrGL7-vdRAmpdedekpRn0a8Mv_kHPPaWxdaSLdsqU2Bi-Vp7fiatirK0AEeQLKbUVwEoQF95KeVnCxSxodhVYwyCn0b9nomS-Y0Q9xMMCWmRAoUxtzOb6q9QQLgxLMi8W83lUEiNDjMyWJFDneYzW3HBhoTub9qGYVbj5Yw1LfDJp635GnPmkK1KU55-Rcz0z_cUboE1rYRRfjPaLY6lFpoZJReWtjDn_F6ZpLTM9mOK7W5rkRacijOMWFPco1Qae6PVh1ON1EuholinnKS2wO5NO3J29_3IEYtbKR8fprwAZfamZjKX77pif6Xk=w770-h518-no" />
+    </div>
+    <script></script>
+</body>
 </html>
