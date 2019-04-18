@@ -18,7 +18,7 @@ function formatDate(date) {
     "Jan",
     "Feb",
     "March",
-    "Apr",
+    "April",
     "May",
     "Jun",
     "Jul",
