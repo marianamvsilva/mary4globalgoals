@@ -21,7 +21,6 @@
 <body>
     <div class="container">
         <h1>Weathify</h1>
-        <h1>Do you work?</h1>
         <h2>The weather app for impulsive travelers</h2>
         <p>In which nearest European capital is it...</p>
 
@@ -32,10 +31,13 @@
         <br>
         <h3>Let us know your location to find the nearest city</h3>
         <div>
-            <input type="text" placeholder="City" />
+<form>
+    <input type="text" id="city-input" placeholder="Where are you know?" autofocus="on" />
+    <input type="submit" value="Search" id="button" />
+</form>
         </div>
         <br />
-        <h2>Today, it is 🌞 in</h2>
+        <h2>Today, it is <span class="description">SUNNY</span> in</h2>
         <!-- SUNNY to be replaced by the choice above -->
         <div>
 
@@ -46,12 +48,12 @@
                     <div class="col-md-4">
                         <h2 class="card-title">25ºC</h2>
                         <p class="card-text">15:15</p>
-                        <p>Max temperature: <span class="temperature">27</span>ºC</p>
-                        <p>Min temperature: <span class="temperature">15</span>ºC</p>
+                        <p>Wind Speed: <span class="temperature">27</span>km/h</p>
+                        <p>Precipitation: <span class="temperature">15</span>%</p>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h2 class="current-location">Madrid, Spain</h2>
+                            <h2 class="current-location">Lisbon, Portugal</h2>
                             <p class="card-text">
                                 PLACEHOLDER TEXT
                             </p>
