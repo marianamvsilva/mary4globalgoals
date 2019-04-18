@@ -17,7 +17,7 @@ function formatDate(date) {
   let monthNames = [
     "Jan",
     "Feb",
-    "Mar",
+    "March",
     "Apr",
     "May",
     "Jun",
