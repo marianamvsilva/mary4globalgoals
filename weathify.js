@@ -56,23 +56,30 @@ let apiPath = "weather";
 let city = "Lisbon";
 let apiParams = `q=${city}&appid=${apiKey}&units=metric`;
 
-function handleResponse(response) {
-  console.log(response.data);
-  let temperature = Math.round(response.data.main.temp);
-  console.log(temperature);
-  let weatherTemperature = document.querySelector("#weather-temperature");
-  weatherTemperature.innerHTML = `${Math.round(temperature)}`;
-  humidity.innerHTML = response.data.main.humidity;
-  windSpeed.innerHTML = `${Math.round(response.data.wind.speed)}`;
-}
+// function handleResponse(response) {
+//   console.log(response.data);
+//   let temperature = Math.round(response.data.main.temp);
+//   console.log(temperature);
+//   let weatherTemperature = document.querySelector("#weather-temperature");
+//   weatherTemperature.innerHTML = `${Math.round(temperature)}`;
+//   humidity.innerHTML = response.data.main.humidity;
+//   windSpeed.innerHTML = `${Math.round(response.data.wind.speed)}`;
+// }
 
-axios.get(`${apiUrl}/${apiPath}?${apiParams}`).then(handleResponse);
+// axios.get(`${apiUrl}/${apiPath}?${apiParams}`).then(handleResponse);
 
-function handleSubmit(event) {
+function search(event) {
   event.preventDefault();
-  let cityInput = document.querySelector("#city-input");
-  alert(cityInput.value);
+  let city = document.querySelector("#city").value;
+  let apiRoot = "https://api.openweathermap.org/data/2.5";
+
+  let apiKey = "020587e6f2a6601e01854941fcf9435b";
+  axios
+    .get(`${apiRoot}/weather?q=${city}&units=metric&appid=${apiKey}`)
+    .then(function(response) {
+      temperature.innerHTML = Math.round(response.data.main.temp);
+    });
 }
 
-let form = document.querySelector("#city-form");
-form.addEventListener("submit", handleSubmit);
+let form = document.querySelector("form");
+form.addEventListener("submit", search);
