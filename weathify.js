@@ -62,6 +62,8 @@ function handleResponse(response) {
   console.log(temperature);
   let weatherTemperature = document.querySelector("#weather-temperature");
   weatherTemperature.innerHTML = `${Math.round(temperature)}`;
+  humidity.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = `${Math.round(response.data.wind.speed)}`;
 }
 
 axios.get(`${apiUrl}/${apiPath}?${apiParams}`).then(handleResponse);
