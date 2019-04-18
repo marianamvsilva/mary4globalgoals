@@ -1,181 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Satisfy"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="weathify.css" />
-    <link rel="stylesheet" type="text/js" href="weathify.js" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <h1>Weathify</h1>
-        <h2>The weather app for impulsive travelers</h2>
-        <p>In which nearest European capital is it...</p>
+      <h1>Weathify</h1>
+      <h2>The weather app for impulsive travelers</h2>
+      <p>In which nearest European capital is it...</p>
 
-        <button>🌞 Sunny</button> <button>🌧 Rainy</button> <button>🌥 Cloudy</button>
-        <button>❄️ Snowing</button>
-        <!-- User chooses what they are looking for -->
-        <br />
-        <br>
-        <h3>Let us know your location to find the nearest city</h3>
-        <div>
-            <form>
-                <input type="text" id="city-input" placeholder="Where are you know?" autofocus="on" />
-                <input type="submit" value="Search" id="button" />
-            </form>
+      <button>🌞 Sunny</button> <button>🌧 Rainy</button>
+      <button>🌥 Cloudy</button>
+      <button>❄️ Snowing</button>
+      <!-- User chooses what they are looking for -->
+      <br />
+      <br />
+      <h3>Let us know your location to find the nearest city</h3>
+      <div>
+        <form>
+          <input
+            type="text"
+            id="city-input"
+            placeholder="What are you feeling?"
+            autofocus="on"
+          />
+          <input type="submit" value="Take me somewhere!" id="button" />
+        </form>
+      </div>
+      <br />
+      <h2>Today, it is <span id="weather-description">SUNNY</span> in</h2>
+      <!-- SUNNY to be replaced by the choice above -->
+      <p id="timestamp">replace here</p>
+      <p id="time-now">replace here</p>
+
+      <h3 id="weather-city">Lisbon, Pt</h3>
+
+      <ul>
+        <li>Temperature: <span id="weather-temperature"></span>ºC</li>
+        <li>Humidity: <span id="weather-humidity">10</span>%</li>
+        <li>Wind Speed: <span id="weather-windspeed">27</span>km/h</li>
+        <li>Precipitation: <span id="weather-precipitation">15</span>%</li>
+      </ul>
+      <br />
+      <br />
+
+      <div class="row">
+        <div class="col-sm">
+          <p class="weekDay"><strong>Monday</strong></p>
+          <p class="city-temperature"><strong>10-27ºC</strong></p>
+          <p>🌞 Sunny</p>
         </div>
-        <br />
-        <h2>Today, it is <span id="weather-description">SUNNY</span> in</h2>
-        <!-- SUNNY to be replaced by the choice above -->
-        <div>
-            <p id="time-stamp"></p>
-            <h3 id="weather-city">Lisbon, Pt</h3>
-            <h4>Temperature: <span id="weather-temperature">27</span>ºC</h4>
-            <h4>Humidity: <span id="weather-humidity">10</span>%</h4>
-            <h4>Wind Speed: <span id="weather-windspeed">27</span>km/h</h4>
-            <h4>Precipitation: <span id="weather-precipitation">15</span>%</h4>
-
-            <br>
-            <br>
-
-            <div class="row">
-                <div class="col-sm">
-                    <p class="weekDay"><b>Monday</b></p>
-                    <p class="city-temperature"><b>10-27ºC</b></p>
-                    <p>🌞 Sunny</p>
-                </div>
-                <div class="col-sm">
-                    <p class="weekDay"><b>Tuesday</b></p>
-                    <p class="city-temperature"><b>10-27ºC</b></p>
-                    <p>🌞 Sunny</p>
-                </div>
-                <div class="col-sm">
-                    <p class="weekDay"><b>Wednesday</b></p>
-                    <p class="city-temperature"><b>10-27ºC</b></p>
-                    <p>🌥 Cloudy</p>
-                </div>
-                <div class="col-sm">
-                    <p class="weekDay"></p><b>Thursday</b></p>
-                    <p class="city-temperature"><b>10-27ºC</b></p>
-                    <p>🌧 Rainy</p>
-                </div>
-                <div class="col-sm">
-                    <p class="weekDay"></p><b>Friday</b></p>
-                    <p class="city-temperature"><b>10-27ºC</b></p>
-                    <p>🌞 Sunny</p>
-                </div>
-            </div>
-            <br />
-            <br />
-            <br />
-            <h2>Other Cities</h2>
-            <br>
-
-            <div class="card-deck">
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Vienna, Austria</h3>
-                        <h2 class="city-temperature">12ºC</h2>
-                        <p>16:15</p>
-
-                    </div>
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <p><b>Monday</b></p>
-                                <p class="city-temperature"><b>10-27ºC</b></p>
-                                <p>🌞 Sunny</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p><b>Tuesday</b></p>
-                                <p class="city-temperature"><b>10-27ºC</b></p>
-                                <p>🌞 Sunny</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p><b>Wednesday</b></p>
-                                <p class="city-temperature"><b>10-27ºC</b></p>
-                                <p>🌧 Rainy</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p><b>Thursday</b></p>
-                                <p class="city-temperature"><b>10-27ºC</b></p>
-                                <p>🌞 Sunny</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p><b>Friday</b></p>
-                                <p class="city-temperature"><b>10-27ºC</b></p>
-                                <p>🌞 Sunny</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p><b>Saturday</b></p>
-                                <p class="city-temperaturee"><b>10-27ºC</b></p>
-                                <p>🌧 Rainy</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h3>KIEV, Ukraine</h3>
-                        <h2 class="city-temperature">12ºC</h2>
-                        <p>16:15</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <p><b>Monday</b></p>
-                                <p class="city-temperature"><b>10-27ºC</b></p>
-                                <p>🌞 Sunny</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p><b>Tuesday</b></p>
-                                <p class="city-temperature"><b>10-27ºC</b></p>
-                                <p>🌞 Sunny</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p><b>Wednesday</b></p>
-                                <p class="city-temperature"><b>10-27ºC</b></p>
-                                <p>🌧 Rainy</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p><b>Thursday</b></p>
-                                <p class="city-temperature"><b>10-27ºC</b></p>
-                                <p>🌞 Sunny</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p><b>Friday</b></p>
-                                <p class="city-temperature"><b>10-27ºC</b></p>
-                                <p>🌞 Sunny</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p><b>Saturday</b></p>
-                                <p class="city-temperature"><b>10-27ºC</b></p>
-                                <p>🌧 Rainy</p>
-                            </div>
-                        </div>
-                        <script>
-                            let place = document.querySelector("#weather-city");
-                            let timestamp = document.querySelector("#time-stamp");
-                            let description = document.querySelector("#weather-description");
-                            let temperature = document.querySelector("#weather-temperature");
-                            let humidity = document.querySelector("#weather-humidity");
-                            let windSpeed = document.querySelector("#weather-windspeed");
-
-
-                            place.innerHTML = "Lisbon";
-                            timestamp.innerHTML = "Thursday, 7:00 PM";
-                            description.innerHTML = "Sunny";
-                            temperature.innerHTML = 16;
-                            humidity.innerHTML = 19999;
-                            windSpeed.innerHTML = 133;
-
-                        </script>
-</body>
-
+        <div class="col-sm">
+          <p class="weekDay"><strong>Tuesday</strong></p>
+          <p class="city-temperature"><strong>10-27ºC</strong></p>
+          <p>🌞 Sunny</p>
+        </div>
+        <div class="col-sm">
+          <p class="weekDay"><strong>Wednesday</strong></p>
+          <p class="city-temperature"><strong>10-27ºC</strong></p>
+          <p>🌥 Cloudy</p>
+        </div>
+        <div class="col-sm">
+          <p class="weekDay"><strong>Thursday</strong></p>
+          <p class="city-temperature"><strong>10-27ºC</strong></p>
+          <p>🌧 Rainy</p>
+        </div>
+        <div class="col-sm">
+          <p class="weekDay"><strong>Friday</strong></p>
+          <p class="city-temperature"><strong>10-27ºC</strong></p>
+          <p>🌞 Sunny</p>
+        </div>
+      </div>
+      <br />
+    </div>
+    <script src="weathify.js"></script>
+  </body>
 </html>
