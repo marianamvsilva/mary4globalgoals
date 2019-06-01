@@ -37,27 +37,53 @@
       </div>
   
 
-      <p>In which nearest European capital is it...</p>
-
-      <button>🌞 Sunny</button> <button>🌧 Rainy</button>
-      <button>🌥 Cloudy</button>
-      <button>❄️ Snowing</button>
-      <!-- User chooses what they are looking for -->
-      <br />
-      <br />
-      <h3>Let us know your location to find the nearest city</h3>
+      <h3>What city is in your mind</h3>
       <div>
         <form>
           <input
             type="text"
             id="city"
-            placeholder="What are you feeling?"
+            placeholder="I feel like going to..."
             autofocus="on"
           />
-          <input type="submit" value="Take me somewhere!" />
+          <input type="submit" value="Search" />
         </form>
       </div>
       <br />
+
+      <div class="container-2">
+        <div class="container-2">
+          <div class="row no-gutters">
+            <div class="col-6 col-md-4">
+              <img src="https://lh3.googleusercontent.com/2AdnMuZ8kEC6mYwKFZJfucMPudAKgbSI-dSUK4wwuVm4cKfVxOMS5G9Vk-VibQcLGzIe4m6cE_e9bTOzcKSFN2xUQI7IJ__ze2SjaGK6Eq2knzMSxwYl1HYYz48olynwmpwCMGyp8loEFaWbWASTsLzNQzuStaS9xvnbX4SxrqzELmiMXmKQxI3fyOQRWXdVqbsTcyvNTxKSKvYSSaS-tlTcuYBfDCUwnPvU6nqU7s6Ahg1bEncALwqOpsIpswu1NJZ5qD2LmCSwb0oLds7HPX45x-4S1jsbXTmVjHp_3xRSo2krfWzkmDtT4lzqQuGLhDGyglYa0VyQzxFv5pmasXxaA4-sf7VGUyuKVLPYRzKKtAwIdbPHI4NA0cwjpjiRy9expYQRsTWx2D5fE_Fx6Lr86Xnw2lO3PpXaQM8mUMosphClhplTPj5oDsme57-UJHXmJ-CHIhV96_ZLBZPi6hqNPagRCL1lkVwt8cmlGYKSfuD92LxTn2cgJqtKk95Dp1fRmbfgiQKToIJA4h9q9ghBjvUSwYXUD1wvxlUBZb_ByGe_dxilbnIBMUabm20ccnRLiCVp6dSuat7pS8AUQLGzR_5o0QLhaIfpqlJSTpBXARRkBfXhiiVn53cRNJAghBNlsOyKwp6ElSsr_T9aJ7A7qCdso4c=w308-h466-no"
+                class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-12 col-sm-6 col-md-8">
+              <div class="container-3">
+                <div class="row">
+                  <div class="col-6 col-md-4">
+                      <h3 id="weather-city">Lisbon, Pt</h3>
+                      
+                      
+                      <h2><span id="weather-temperature"></span>ºC</h2>
+                      <p id="timestamp">replace here</p>
+                      <p id="time-now">replace here</p>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-8">
+                    <ul>
+                      <li>Humidity: <span id="weather-humidity">10</span>%</li>
+                      <li>Wind Speed: <span id="weather-windspeed">27</span>km/h</li>
+                      <li>Precipitation: <span id="weather-precipitation">15</span>%</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+      
+              <br />
+              <br />
+            </div>
+          </div>
       <h2>Today, it is <span id="weather-description">SUNNY</span> in</h2>
       <!-- SUNNY to be replaced by the choice above -->
       <p id="timestamp">replace here</p>
