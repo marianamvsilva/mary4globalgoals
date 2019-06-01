@@ -3,14 +3,12 @@ let timestamp = document.querySelector("#timestamp");
 let description = document.querySelector("#weather-description");
 let temperature = document.querySelector("#weather-temperature");
 let humidity = document.querySelector("#weather-humidity");
-let windSpeed = document.querySelector("#weather-windspeed");
+let wind = document.querySelector("#weather-windspeed");
 let timeNow = document.querySelector("#time-now");
+let precipitation = document.querySelector("#weather-precipitation");
 
 place.innerHTML = "Lisbon";
 timestamp.innerHTML = "Thursday, 7:00 PM";
-description.innerHTML = "Sunny";
-humidity.innerHTML = 19999;
-windSpeed.innerHTML = 133;
 
 function formatDate(date) {
   let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -77,7 +75,11 @@ function search(event) {
   axios
     .get(`${apiRoot}/weather?q=${city}&units=metric&appid=${apiKey}`)
     .then(function(response) {
+      place.innerHTML = response.data.name;
       temperature.innerHTML = Math.round(response.data.main.temp);
+
+      wind.innerHTML = Math.round(response.data.wind.speed);
+      humidity.innerHTML = Math.round(response.data.main.humidity);
     });
 }
 
