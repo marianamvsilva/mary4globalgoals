@@ -77,7 +77,6 @@ function search(event) {
     .then(function(response) {
       place.innerHTML = response.data.name;
       temperature.innerHTML = Math.round(response.data.main.temp);
-
       wind.innerHTML = Math.round(response.data.wind.speed);
       humidity.innerHTML = Math.round(response.data.main.humidity);
     });
@@ -85,3 +84,21 @@ function search(event) {
 
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
+
+let slogan = document.querySelector("#slogan");
+
+function formatSlogan() {
+  console.log(temperature.innerHTML);
+  if (temperature.innerHTML < 29) {
+    return "FUCKING HOT";
+  } else if (temperature.innerHTML > 29) {
+    return "NOT SO HOT";
+  } else {
+    return "PAULO";
+  }
+}
+
+slogan.innerHTML = formatSlogan();
+
+//You're set for some beach vacay
+//Pack your warmest clothes

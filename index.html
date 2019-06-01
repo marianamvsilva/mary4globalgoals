@@ -20,11 +20,13 @@
   </head>
 
   <body>
+
+    <div class="container-fluid" style="background-color:salmon;">
     <div class="container">
-      <div class="container">
       <div class="row no-gutters">
         <div class="ol-6 col-md-4">
-          <img src="https://lh3.googleusercontent.com/2AdnMuZ8kEC6mYwKFZJfucMPudAKgbSI-dSUK4wwuVm4cKfVxOMS5G9Vk-VibQcLGzIe4m6cE_e9bTOzcKSFN2xUQI7IJ__ze2SjaGK6Eq2knzMSxwYl1HYYz48olynwmpwCMGyp8loEFaWbWASTsLzNQzuStaS9xvnbX4SxrqzELmiMXmKQxI3fyOQRWXdVqbsTcyvNTxKSKvYSSaS-tlTcuYBfDCUwnPvU6nqU7s6Ahg1bEncALwqOpsIpswu1NJZ5qD2LmCSwb0oLds7HPX45x-4S1jsbXTmVjHp_3xRSo2krfWzkmDtT4lzqQuGLhDGyglYa0VyQzxFv5pmasXxaA4-sf7VGUyuKVLPYRzKKtAwIdbPHI4NA0cwjpjiRy9expYQRsTWx2D5fE_Fx6Lr86Xnw2lO3PpXaQM8mUMosphClhplTPj5oDsme57-UJHXmJ-CHIhV96_ZLBZPi6hqNPagRCL1lkVwt8cmlGYKSfuD92LxTn2cgJqtKk95Dp1fRmbfgiQKToIJA4h9q9ghBjvUSwYXUD1wvxlUBZb_ByGe_dxilbnIBMUabm20ccnRLiCVp6dSuat7pS8AUQLGzR_5o0QLhaIfpqlJSTpBXARRkBfXhiiVn53cRNJAghBNlsOyKwp6ElSsr_T9aJ7A7qCdso4c=w308-h466-no" class="img-fluid" alt="Responsive image">
+          <img src="https://lh3.googleusercontent.com/8Mb-DxNZax8Yjm6i3IYSGltRd2f-kwLOd9B04Qny5uXJIh0ANB9XWnWYz6mWyaH8Djff9_D6JjeduVW3XOgFae9kd4jawCrf5L3xXgrVOaiz8l0xLkeOHYr8Nu3tX0BxI5ID2_WYH49p4DvT4cXJz91zukejX49ZZASMYKQ2O5j4swPh1JHofrfjUwlDfEUAwKipcnoC-kBEq__l1SxWLImhm0d35FXRe2x4x6VtcIEUXOmBHxav-VXvJptdHZzW0NVZDLwJLsMgl3pN7v-qGilNp_qdCAoMUkRqnRjxwGGp5Aa1MdaQzYKFYcMDtAuYXOJlaBBeMXWO4eaYPXtO4BZXMLllsj11rB1iDfizx7FTPxVyFAQgWcV7jeqAvLKO6vJLcGPV6y3LHO4opfAjzqQOV3DfhU6y-INFr-GZeCq1uOJP4tV5TuFAI5E8ZpqioIfCn6hXq9cc1pwp33Wc91izB1sssP2x3vfMu-L1jUkPx-Y8xTFuKyGh7HrUkFfIHC1L8RDuWwdzmdOG_yB90AKL_T98650D2YDzmD1sKFw37V_4WeXIxoVSn5PQut0n5W873PNCpK65PWdtaTvHJmECmqQRPOkyYiFAjH5YVJ7rCu5nEiUJqDvQLRXdI6qReIaLpDu6EHdQ8FcSV3AVtdmbIecf3uA=w308-h466-no"
+            class="img-fluid" alt="Responsive image">
         </div>
         <div class="col-12 col-sm-6 col-md-8">
           <br />
@@ -37,11 +39,15 @@
           <br />
         </div>
       </div>
-  
+    </div>
+    </div>
 
+
+    <div class="container-4">
+      
       <h3>What city is in your mind</h3>
       <div>
-        <form>
+        <form class="form">
           <input
             type="text"
             id="city"
@@ -50,6 +56,7 @@
           />
           <input type="submit" value="Search" />
         </form>
+      </div>
       </div>
       <br />
 
@@ -64,10 +71,8 @@
               <div class="container-3">
                 <div class="row">
                   <div class="col-6 col-md-4">
-                      <h3 id="weather-city">Lisbon, Pt</h3>
-                      
-                      
-                      <h2><span id="weather-temperature"></span>ºC</h2>
+                      <h4 id="weather-city">Lisbon, Pt</h4>
+                    <h4><span id="weather-temperature"></span>ºC</h4>
                       <p id="timestamp">replace here</p>
                       <p id="time-now">replace here</p>
                   </div>
@@ -77,10 +82,9 @@
                       <li>Wind Speed: <span id="weather-windspeed">27</span>km/h</li>
                     </ul>
                   </div>
-                  <p class="slogan">Fucking <strong>love</strong> is in the air.</p>
-                  <p class="subslogan">It's sunny, for those who didn't get it. </p>
-<br />
-                  <div class="row">
+                  <p id="slogan">Fucking <strong>love</strong> is in the air.</p>
+                    <br />
+                  <div class="row" id="table">
                     <div class="col-sm">
                       <p class="weekDay"><strong>Monday</strong></p>
                       <p class="city-temperature"><strong>10-27ºC</strong></p>
@@ -104,7 +108,7 @@
                     <div class="col-sm">
                       <p class="weekDay"><strong>Friday</strong></p>
                       <p class="city-temperature"><strong>1-4ºC</strong></p>
-                      <p><i class="fas fa-snowboarding"></i> Snow</p>
+                      <p><i class="fas fa-snowboarding hand"></i> Snow</p>
                     </div>
                   </div>
                 </div>
