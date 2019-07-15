@@ -15,51 +15,48 @@
     />
     <link rel="stylesheet" type="text/css" href="weathify.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
           crossorigin="anonymous"></script>
   </head>
 
   <body>
-
     <div class="introduction">
-    <div class="container">
-      <div class="row no-gutters">
-        <div class="ol-6 col-md-4">
-          <img src="https://lh3.googleusercontent.com/8Mb-DxNZax8Yjm6i3IYSGltRd2f-kwLOd9B04Qny5uXJIh0ANB9XWnWYz6mWyaH8Djff9_D6JjeduVW3XOgFae9kd4jawCrf5L3xXgrVOaiz8l0xLkeOHYr8Nu3tX0BxI5ID2_WYH49p4DvT4cXJz91zukejX49ZZASMYKQ2O5j4swPh1JHofrfjUwlDfEUAwKipcnoC-kBEq__l1SxWLImhm0d35FXRe2x4x6VtcIEUXOmBHxav-VXvJptdHZzW0NVZDLwJLsMgl3pN7v-qGilNp_qdCAoMUkRqnRjxwGGp5Aa1MdaQzYKFYcMDtAuYXOJlaBBeMXWO4eaYPXtO4BZXMLllsj11rB1iDfizx7FTPxVyFAQgWcV7jeqAvLKO6vJLcGPV6y3LHO4opfAjzqQOV3DfhU6y-INFr-GZeCq1uOJP4tV5TuFAI5E8ZpqioIfCn6hXq9cc1pwp33Wc91izB1sssP2x3vfMu-L1jUkPx-Y8xTFuKyGh7HrUkFfIHC1L8RDuWwdzmdOG_yB90AKL_T98650D2YDzmD1sKFw37V_4WeXIxoVSn5PQut0n5W873PNCpK65PWdtaTvHJmECmqQRPOkyYiFAjH5YVJ7rCu5nEiUJqDvQLRXdI6qReIaLpDu6EHdQ8FcSV3AVtdmbIecf3uA=w308-h466-no"
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-6 col-md-4">
+            <img src="https://lh3.googleusercontent.com/8Mb-DxNZax8Yjm6i3IYSGltRd2f-kwLOd9B04Qny5uXJIh0ANB9XWnWYz6mWyaH8Djff9_D6JjeduVW3XOgFae9kd4jawCrf5L3xXgrVOaiz8l0xLkeOHYr8Nu3tX0BxI5ID2_WYH49p4DvT4cXJz91zukejX49ZZASMYKQ2O5j4swPh1JHofrfjUwlDfEUAwKipcnoC-kBEq__l1SxWLImhm0d35FXRe2x4x6VtcIEUXOmBHxav-VXvJptdHZzW0NVZDLwJLsMgl3pN7v-qGilNp_qdCAoMUkRqnRjxwGGp5Aa1MdaQzYKFYcMDtAuYXOJlaBBeMXWO4eaYPXtO4BZXMLllsj11rB1iDfizx7FTPxVyFAQgWcV7jeqAvLKO6vJLcGPV6y3LHO4opfAjzqQOV3DfhU6y-INFr-GZeCq1uOJP4tV5TuFAI5E8ZpqioIfCn6hXq9cc1pwp33Wc91izB1sssP2x3vfMu-L1jUkPx-Y8xTFuKyGh7HrUkFfIHC1L8RDuWwdzmdOG_yB90AKL_T98650D2YDzmD1sKFw37V_4WeXIxoVSn5PQut0n5W873PNCpK65PWdtaTvHJmECmqQRPOkyYiFAjH5YVJ7rCu5nEiUJqDvQLRXdI6qReIaLpDu6EHdQ8FcSV3AVtdmbIecf3uA=w308-h466-no"
             class="img-fluid" alt="Responsive image">
-        </div>
-        <div class="col-12 col-sm-6 col-md-8">
-          <br />
-          <br />
-          <h1>Weathify</h1>
-          <h2>The weather app for <strong>impulsive</strong> solo travelers</h2>
-          <br />
-          <button type="button" class="btn btn-dark">Download for Android</button>
-          <button type="button" class="btn btn-dark">Download for IOS</button>
-          <br />
+          </div>
+          <div class="col-12 col-sm-6 col-md-8">
+            <br />
+            <br />
+            <h1>Weathify</h1>
+            <h2>The weather app for <strong>impulsive</strong> solo travelers</h2>
+            <br />
+            <button type="button" class="btn btn-dark">Download for Android</button>
+            <button type="button" class="btn btn-dark">Download for IOS</button>
+            <br />
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="destination">
+      <div class="container">
+        <h3>What city is in your mind</h3>
+        <div>
+          <form class="form">
+            <input
+              type="text"
+              id="city"
+              placeholder="I feel like going to..."
+              autofocus="on"
+            />
+            <input type="submit" value="Search" />
+          </form>
+        </div> 
+      </div>
     </div>
-
-
-    <div class="container">
-      
-  
-    <div class="container" style="background-color: green;">
-      <h3>What city is in your mind</h3>
-      <div>
-        <form class="form">
-          <input
-            type="text"
-            id="city"
-            placeholder="I feel like going to..."
-            autofocus="on"
-          />
-          <input type="submit" value="Search" />
-        </form>
-      </div> 
-        </div>
       <br />
 
       <div class="container-2">
@@ -90,7 +87,7 @@
                     <div class="row border bg-light">
                       <div class="col-sm">
                         <p class="weekDay"><strong>Monday</strong></p>
-                        <p class="city-temperature">10-27ºC</strong></p>
+                        <p class="city-temperature"><strong>10-27ºC</strong></p>
                         <p><i class="fas fa-umbrella-beach"></i> Sunny</p>
                       </div>
                       <div class="col-sm">
