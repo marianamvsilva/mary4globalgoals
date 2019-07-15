@@ -4,7 +4,6 @@ body {
 
 h1 {
   font-family: "Satisfy", cursive;
-  margin-top: 5%;
   font-size: 80px;
 }
 
@@ -43,5 +42,5 @@ h4 {
 }
 
 .destination {
-  background-color: green;
+  margin: 10px 0;
 }
