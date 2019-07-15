@@ -28,11 +28,6 @@ h4 {
   font-style: strong;
 }
 
-#details {
-  margin-top: 10%;
-  font-size: 20px;
-}
-
 .hand {
   color: rgb(148, 137, 139);
 }
@@ -41,6 +36,14 @@ h4 {
   background-color: salmon;
 }
 
-.destination {
-  margin: 10px 0;
+.content-section {
+  margin: 60px 0;
+}
+
+.content-section:first-child {
+  margin-top: 0;
+}
+
+.forecast {
+  padding: 30px;
 }
