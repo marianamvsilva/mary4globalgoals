@@ -9,21 +9,24 @@ h1 {
 }
 
 h2 {
+  font-family: "Open Sans", sans-serif;
   color: white;
   font-size: 60px;
 }
 
 h4 {
+  font-family: "Open Sans", sans-serif;
   font-size: 60px;
 }
 
-#question {
+#details {
   background-color: pink;
 }
 
 #slogan {
-  font-size: 100px;
-  color: red;
+  font-size: 40px;
+  color: salmon;
+  font-style: strong;
 }
 
 #details {
@@ -35,7 +38,6 @@ h4 {
   color: rgb(148, 137, 139);
 }
 
-.container-4 {
-  background-color: pink;
-  align-items: center;
+.introduction {
+  background-color: salmon;
 }

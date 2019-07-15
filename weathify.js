@@ -79,6 +79,7 @@ function search(event) {
       temperature.innerHTML = Math.round(response.data.main.temp);
       wind.innerHTML = Math.round(response.data.wind.speed);
       humidity.innerHTML = Math.round(response.data.main.humidity);
+      slogan.innerHTML = formatSlogan();
     });
 }
 
@@ -90,15 +91,13 @@ let slogan = document.querySelector("#slogan");
 function formatSlogan() {
   console.log(temperature.innerHTML);
   if (temperature.innerHTML < 29) {
-    return "FUCKING HOT";
+    return "You're set for some beach vacay.";
   } else if (temperature.innerHTML > 29) {
     return "NOT SO HOT";
   } else {
     return "PAULO";
   }
 }
-
-slogan.innerHTML = formatSlogan();
 
 //You're set for some beach vacay
 //Pack your warmest clothes
