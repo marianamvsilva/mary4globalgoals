@@ -5,6 +5,7 @@ body {
 h1 {
   font-family: "Barriecito", cursive;
   font-size: 80px;
+  color: #ff7145;
 }
 
 h2 {
@@ -14,8 +15,8 @@ h2 {
 }
 
 h4 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 60px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
 }
 
 #details {
