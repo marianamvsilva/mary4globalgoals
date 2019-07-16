@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  font-family: "Satisfy", cursive;
+  font-family: "Barriecito", cursive;
   font-size: 80px;
 }
 
@@ -24,7 +24,7 @@ h4 {
 
 #slogan {
   font-size: 40px;
-  color: salmon;
+  color: #ffc44f;
   font-style: strong;
 }
 
@@ -33,7 +33,7 @@ h4 {
 }
 
 .introduction {
-  background-color: salmon;
+  background-color: #ffc44f;
 }
 
 .content-section {

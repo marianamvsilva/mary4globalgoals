@@ -6,6 +6,7 @@ let humidity = document.querySelector("#weather-humidity");
 let wind = document.querySelector("#weather-windspeed");
 let timeNow = document.querySelector("#time-now");
 let precipitation = document.querySelector("#weather-precipitation");
+let tomorrow = document.querySelector("#weather-forecast");
 
 place.innerHTML = "Lisbon";
 timestamp.innerHTML = "Thursday, 7:00 PM";
@@ -81,6 +82,12 @@ function search(event) {
       humidity.innerHTML = Math.round(response.data.main.humidity);
       slogan.innerHTML = formatSlogan();
     });
+
+  axios
+    .get(`${apiRoot}/forecast?q=${city}&units=metric&appid=${apiKey}`)
+    .then(function(response) {
+      tomorrow.innerHTML = Math.round(response.data.main.temp);
+    });
 }
 
 let form = document.querySelector("form");
@@ -98,6 +105,3 @@ function formatSlogan() {
     return "PAULO";
   }
 }
-
-//You're set for some beach vacay
-//Pack your warmest clothes
