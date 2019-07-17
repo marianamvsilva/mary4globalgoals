@@ -98,10 +98,10 @@ let slogan = document.querySelector("#slogan");
 function formatSlogan() {
   console.log(temperature.innerHTML);
   if (temperature.innerHTML < 29) {
-    return "You're set for some beach vacay.";
+    return "Don't worry. You can explore some coffee shops.";
   } else if (temperature.innerHTML > 29) {
-    return "NOT SO HOT";
+    return "You're set for some beach vacay.";
   } else {
-    return "PAULO";
+    return "Oops, it's not working.";
   }
 }

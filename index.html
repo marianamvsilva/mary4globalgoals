@@ -47,6 +47,7 @@
             <h2>
               The weather app for <strong>impulsive</strong> solo travelers
             </h2>
+            <br />
             <button type="button" class="btn btn-dark">
               Download for Android
             </button>
@@ -56,7 +57,7 @@
       </div>
     </div>
     <div class="destination content-section">
-      <div class="container">
+      <div class="container text-center">
         <h3>What city is in your mind</h3>
         <div>
           <form class="form">
@@ -65,8 +66,9 @@
               id="city"
               placeholder="I feel like going to..."
               autofocus="on"
+              size="30"
             />
-            <input type="submit" value="Search" />
+            <input type="submit" value="Search" class="btn btn-primary" />
           </form>
         </div>
       </div>
@@ -83,24 +85,23 @@
           </div>
           <div class="col col-md-8">
             <div class="row">
-              <div class="col-md-4">
-                <div id="weather-city">City</div>
-                <div id="time-now">replace here</div>
+              <div class="col-md-5">
+                <span id="weather-city">City</span>,
+                <span id="time-now">replace here</span>
                 <h4><span id="weather-temperature"></span>ºC</h4>
-                <p id="timestamp">replace here</p>
+                <p id="timestamp" class="weatheritems">replace here</p>
+                <p class="weatheritems">
+                  Humidity: <span id="weather-humidity">10</span>%
+                </p>
+                <p class="weatheritems">
+                  Wind Speed: <span id="weather-windspeed">27</span>km/h
+                </p>
               </div>
-              <div class="col-md-4">
-                <ul>
-                  <li>Humidity: <span id="weather-humidity">10</span>%</li>
-                  <li>
-                    Wind Speed: <span id="weather-windspeed">27</span>km/h
-                  </li>
-                </ul>
+              <div class="col-md-7">
+                <p id="slogan">I'm so jealous of this brave adventure.</p>
               </div>
             </div>
-            <div>
-              <p id="slogan">Fucking <strong>love</strong> is in the air.</p>
-            </div>
+            <br />
             <div class="forecast border bg-light">
               <div class="row">
                 <div class="col-sm">

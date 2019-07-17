@@ -3,9 +3,9 @@ body {
 }
 
 h1 {
-  font-family: "Barriecito", cursive;
+  font-family: "Montserrat", sans-serif;
   font-size: 80px;
-  color: #ff7145;
+  color: #882eb3;
 }
 
 h2 {
@@ -14,9 +14,21 @@ h2 {
   font-size: 60px;
 }
 
-h4 {
+h2 {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 60px;
+}
+
+.weatheritems {
+  margin-bottom: 4px;
+}
+
+h4,
+#slogan {
   font-family: "Montserrat", sans-serif;
-  font-size: 80px;
+  font-size: 100px;
+  font-style: bold;
 }
 
 #details {
@@ -25,8 +37,9 @@ h4 {
 
 #slogan {
   font-size: 40px;
-  color: #ffc44f;
+  color: #882eb3;
   font-style: strong;
+  margin-top: 30px;
 }
 
 .hand {
@@ -47,4 +60,9 @@ h4 {
 
 .forecast {
   padding: 30px;
+}
+
+.btn-primary {
+  background-color: #882eb3;
+  border-color: #882eb3;
 }
