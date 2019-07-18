@@ -78,6 +78,7 @@ function friendlyDate(date) {
 }
 
 function search(event) {
+  document.querySelector(".forecast").setAttribute("style", "display: block");
   event.preventDefault();
   let city = document.querySelector("#city").value;
   let apiRoot = "https://api.openweathermap.org/data/2.5";
@@ -118,6 +119,7 @@ function search(event) {
         });
     });
 }
+
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
 
