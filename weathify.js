@@ -6,7 +6,7 @@ let humidity = document.querySelector("#weather-humidity");
 let wind = document.querySelector("#weather-windspeed");
 let timeNow = document.querySelector("#time-now");
 let precipitation = document.querySelector("#weather-precipitation");
-let tomorrow = document.querySelector("#weather-forecast");
+let tomorrow = document.querySelector("#date-forecast");
 
 place.innerHTML = "Lisbon";
 timestamp.innerHTML = "Thursday, 7:00 PM";
@@ -55,6 +55,29 @@ let apiPath = "weather";
 let city = "Lisbon";
 let apiParams = `q=${city}&appid=${apiKey}&units=metric`;
 
+function friendlyDate(date) {
+  let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let monthNames = [
+    "Jan",
+    "Feb",
+    "March",
+    "April",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ];
+
+  let day = weekDays[date.getDay()];
+  let month = monthNames[date.getMonth()];
+
+  return `${day}, ${month} ${date.getDate()}`;
+}
+
 function search(event) {
   event.preventDefault();
   let city = document.querySelector("#city").value;
@@ -73,10 +96,19 @@ function search(event) {
   axios
     .get(`${apiRoot}/forecast?q=${city}&units=metric&appid=${apiKey}`)
     .then(function(response) {
-      tomorrow.innerHTML = Math.round(response.data.main.temp);
+      document
+        .querySelectorAll("#day__block")
+        .forEach(function(element, index) {
+          let day = new Date(response.data.list[1 + index * 8].dt_txt);
+          element.querySelector("#day__block-date").innerHTML = friendlyDate(
+            day
+          );
+          element.querySelector("#day__block-temp").innerHTML = Math.round(
+            response.data.list[1 + index * 8].main.temp
+          );
+        });
     });
 }
-
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
 
@@ -85,7 +117,7 @@ let slogan = document.querySelector("#slogan");
 function formatSlogan() {
   console.log(temperature.innerHTML);
   if (temperature.innerHTML < 29) {
-    return "Don't worry. You can explore some coffee shops.";
+    return "Don't worry. You can still explore some coffee shops.";
   } else if (temperature.innerHTML > 29) {
     return "You're set for some beach vacay.";
   } else {

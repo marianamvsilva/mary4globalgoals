@@ -227,7 +227,7 @@
                 <p class="city-temperature"><strong>1-4ºC</strong></p>
                 <p><i class="fas fa-snowboarding hand"></i> Snow</p>
                 <span class="weather-forecast">23</span>
-                <span class="forecast-date">23</span>
+                <span class="tomorrow-date">23</span>
               </div>
             </div>
           </div>
@@ -239,3 +239,27 @@
 </body>
 
 </html>
+
+.get(`${apiRoot}/forecast?q=${city}&units=metric&appid=${apiKey}`)
+.then(function(response) {
+document.querySelector(".date-forecast")
+.forEach(function(element, index) {
+let day = new Date(response.data.list[index].dt_txx);
+element querySelector(".date-forecast").innerHTML = formatDate(day);
+element.querySelector(".temp-forecast").innerHTML = Math.round(response.data.list[index].main.temp);
+});
+});
+}
+
+
+axios
+.get(`${apiRoot}/weather?q=${city}&units=metric&appid=${apiKey}`)
+.then(function (response) {
+document
+.querySelector("#day__block")
+.forEach(function (element, index) {
+let day = new Date(response.data.list[index].dt_txt);
+element.querySelector("#day__block-date").innerHTML = formatDate(day);
+element.querySelector("#day__block-temp").innerHTML = Math.round(response.data.list[index].main.temp);
+});
+}

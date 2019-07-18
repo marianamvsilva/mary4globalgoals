@@ -20,15 +20,20 @@ h2 {
   font-size: 60px;
 }
 
-.weatheritems {
-  margin-bottom: 4px;
-}
-
 h4,
 #slogan {
   font-family: "Montserrat", sans-serif;
   font-size: 100px;
   font-style: bold;
+}
+
+.btn-primary {
+  background-color: #882eb3;
+  border-color: #882eb3;
+}
+
+.weatheritems {
+  margin-bottom: 4px;
 }
 
 #details {
@@ -40,10 +45,6 @@ h4,
   color: #882eb3;
   font-style: strong;
   margin-top: 30px;
-}
-
-.hand {
-  color: rgb(148, 137, 139);
 }
 
 .introduction {
@@ -60,9 +61,4 @@ h4,
 
 .forecast {
   padding: 30px;
-}
-
-.btn-primary {
-  background-color: #882eb3;
-  border-color: #882eb3;
 }
