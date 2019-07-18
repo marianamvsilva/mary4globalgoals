@@ -6,7 +6,6 @@ let humidity = document.querySelector("#weather-humidity");
 let wind = document.querySelector("#weather-windspeed");
 let timeNow = document.querySelector("#time-now");
 let precipitation = document.querySelector("#weather-precipitation");
-let tomorrow = document.querySelector("#date-forecast");
 
 place.innerHTML = "Lisbon";
 timestamp.innerHTML = "Thursday, 7:00 PM";
@@ -90,6 +89,7 @@ function search(event) {
       temperature.innerHTML = Math.round(response.data.main.temp);
       wind.innerHTML = Math.round(response.data.wind.speed);
       humidity.innerHTML = Math.round(response.data.main.humidity);
+      description.innerHTML = response.data.weather[0].main;
       slogan.innerHTML = formatSlogan();
     });
 
@@ -106,6 +106,15 @@ function search(event) {
           element.querySelector("#day__block-temp").innerHTML = Math.round(
             response.data.list[1 + index * 8].main.temp
           );
+
+          element
+            .querySelector("#day__block-icon")
+            .setAttribute(
+              "src",
+              "http://openweathermap.org/img/w/" +
+                response.data.list[1 + index * 8].weather[0].icon +
+                ".png"
+            );
         });
     });
 }
@@ -116,9 +125,9 @@ let slogan = document.querySelector("#slogan");
 
 function formatSlogan() {
   console.log(temperature.innerHTML);
-  if (temperature.innerHTML < 29) {
+  if (description.innerHTML == "Clouds" || description.innerHTML == "Rain") {
     return "Don't worry. You can still explore some coffee shops.";
-  } else if (temperature.innerHTML > 29) {
+  } else if (description.innerHTML == "Clear") {
     return "You're set for some beach vacay.";
   } else {
     return "Oops, it's not working.";

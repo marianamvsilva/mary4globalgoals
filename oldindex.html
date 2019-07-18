@@ -263,3 +263,14 @@ element.querySelector("#day__block-date").innerHTML = formatDate(day);
 element.querySelector("#day__block-temp").innerHTML = Math.round(response.data.list[index].main.temp);
 });
 }
+
+
+function formatSlogan() {
+console.log(temperature.innerHTML);
+if (temperature.innerHTML < 29) { return "Don't worry. You can still explore some coffee shops." ; } else if
+  (temperature.innerHTML> 29) {
+  return "You're set for some beach vacay.";
+  } else {
+  return "Oops, it's not working.";
+  }
+  }

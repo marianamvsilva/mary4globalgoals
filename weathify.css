@@ -62,3 +62,8 @@ h4,
 .forecast {
   padding: 30px;
 }
+
+.day__block-temp {
+  font-size: 50px;
+  font-weight: bold;
+}
